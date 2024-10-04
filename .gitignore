@@ -11,3 +11,6 @@ src/_includes/scripts
 
 # secret data
 .env
+
+# lock file
+package-lock.json
