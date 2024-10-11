@@ -44,11 +44,12 @@
   </head>
 
   <body class="{{ layout }}">
-    {% if page.url != "/" %}
+    {% if page.url == "/" %}
+      <main id="main" class="flow">{{ content | safe }}</main>
+    {% else %}
       {% include "partials/header.njk" %}
+      <main id="main" class="flow">{{ content | safe }}</main>
     {% endif %}
-
-    <main id="main" class="flow">{{ content | safe }}</main>
 
     {% include "partials/footer.njk" %}
 
