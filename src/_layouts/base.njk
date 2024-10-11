@@ -2,13 +2,11 @@
 
 <!doctype html>
 <html lang="{{ meta.lang }}">
-  <!-- The order of elements in the head follows recommendations by Harry Roberts. learn more here: https://www.youtube.com/watch?v=MHyAOZ45vnU -->
-
   <head>
     <!-- 1 charset/viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
     <!-- 2 title -->
     <title>
       {%- if title -%}
@@ -38,10 +36,17 @@
 
     <!-- 8 meta tags, icons, open graph etc.  -->
     {% include "head/meta-info.njk" %}
+
+    <!-- Log variables to the console for debugging -->
+    <script>
+      console.log({{ page | dump | safe }}); 
+    </script>
   </head>
 
   <body class="{{ layout }}">
-    {% include "partials/header.njk" %}
+    {% if page.url != "/" %}
+      {% include "partials/header.njk" %}
+    {% endif %}
 
     <main id="main" class="flow">{{ content | safe }}</main>
 

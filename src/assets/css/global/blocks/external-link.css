@@ -4,7 +4,7 @@ article
 }
 
 article
-  a[href^='http']:not([href*='localhost:8080']):not([href*='eleventy-excellent.netlify.app']):not(
+  a[href^='http']:not([href*='localhost:8080']):not([href*='jeanducrot.com']):not(
     .no-indicator
   )::after {
   position: absolute;

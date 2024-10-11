@@ -1,12 +1,12 @@
 export const url = process.env.URL || 'http://localhost:8080';
-export const siteName = 'Eleventy Excellent';
-export const siteDescription = 'Eleventy starter for building modern, resilient websites';
-export const siteType = 'Person'; // schema
+export const siteName = 'Jean Ducrot';
+export const siteDescription = 'Where Jean Ducrot writes about digital accessibility.';
+export const siteType = 'Person'; 
 export const locale = 'en_EN';
 export const lang = 'en';
 export const skipContent = 'Skip to content';
 export const author = {
-  name: 'Jean Ducrot', // blog author's name. Must be set.
+  name: 'Jean Ducrot', 
   avatar: '/icon-512x512.png', // path to the author's avatar. In this case just using a favicon.
   email: 'jean@jeanducrot.com', // email of the author
   website: 'https://www.jeanducrot.com' // personal site of the author
