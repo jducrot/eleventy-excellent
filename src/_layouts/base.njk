@@ -1,12 +1,10 @@
-{% set assetHash = helpers.random() %}
-
+{# {% set assetHash = helpers.random() %} #}
 <!doctype html>
 <html lang="{{ meta.lang }}">
   <head>
     <!-- 1 charset/viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <!-- 2 title -->
     <title>
       {%- if title -%}
@@ -15,32 +13,20 @@
         {{- meta.siteName -}}
       {%- endif -%}
     </title>
-
     <base href="{{ page.url }}" />
-
     <!-- 3 synchronous js  -->
     {% include "head/js-inline.njk" %}
-
     <!-- 4 schema settings -->
     {% include "head/schema.njk" %}
-
     <!-- 5 CSS  -->
     <!-- <link rel="stylesheet" href="/assets/css/global.css?{{ assetHash }}" /> -->
     {% include "head/css-inline.njk" %}
-
     <!-- 6 preloads  -->
     {% include "head/preloads.njk" %}
-
     <!-- 7 defer  -->
     {% include "head/js-defer.njk" %}
-
     <!-- 8 meta tags, icons, open graph etc.  -->
     {% include "head/meta-info.njk" %}
-
-    <!-- Log variables to the console for debugging -->
-    <script>
-      console.log({{ page | dump | safe }}); 
-    </script>
   </head>
 
   <body class="{{ layout }}">
@@ -50,9 +36,7 @@
       {% include "partials/header.njk" %}
       <main id="main" class="flow">{{ content | safe }}</main>
     {% endif %}
-
     {% include "partials/footer.njk" %}
-
     <script type="module" src="/assets/scripts/components/custom-easteregg.js"></script>
     <custom-easteregg></custom-easteregg>
   </body>
