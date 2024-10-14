@@ -1,20 +1,16 @@
 <!-- toggle drawer menu in _data/meta.js -->
 {% set drawerNav = meta.navigation.drawerNav %}
 
-<nav id="mainnav" class="mainnav" aria-label="{{ meta.navigation.ariaTop }}">
+<nav id="mainnav" 
+     class="mainnav" 
+     aria-label="{{ meta.navigation.ariaTop }}">
   <ul class="cluster" role="list" no-flash>
     {% for item in navigation.top %}
       <li>
-        <a
-          href="{{ item.url }}"
-          {{
-            helpers.getLinkActiveState(item.url,
-            page.url)
-            |
-            safe
-          }}
-          >{{ item.text }}</a
-        >
+        <a href="{{ item.url }}" 
+           {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>
+           {{ item.text }}
+        </a>
       </li>
     {% endfor %}
   </ul>
@@ -26,9 +22,11 @@
   <!-- see also: https://kittygiraudel.com/2022/09/30/templating-in-html/ -->
 
   <template id="burger-template">
-    <button type="button" aria-expanded="false" aria-controls="mainnav" class="cluster">
+    <button type="button" 
+            aria-expanded="false" 
+            aria-controls="mainnav" 
+            class="cluster">
       <span>{{ meta.navigation.navLabel }}</span>
-
       <svg
         width="1em"
         height="1em"
@@ -37,8 +35,7 @@
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
-        stroke-linejoin="round"
-      >
+        stroke-linejoin="round">
         <path d="M5 12h14" />
         <path d="M12 5v14" />
       </svg>
