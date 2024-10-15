@@ -9,9 +9,12 @@
   --cluster-horizontal-alignment: center;
 }
 
-/* increase tab size */
 .site-footer .footer__meta a {
   padding: var(--space-xs);
+}
+
+.site-footer .copyright {
+  padding: var(--space-s) 0 0 0;
 }
 
 .site-footer svg {
