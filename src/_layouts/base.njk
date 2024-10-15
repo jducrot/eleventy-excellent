@@ -5,6 +5,7 @@
     <!-- 1 charset/viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <!-- 2 title -->
     <title>
       {%- if title -%}
@@ -14,29 +15,34 @@
       {%- endif -%}
     </title>
     <base href="{{ page.url }}" />
+    
     <!-- 3 synchronous js  -->
     {% include "head/js-inline.njk" %}
+    
     <!-- 4 schema settings -->
     {% include "head/schema.njk" %}
+    
     <!-- 5 CSS  -->
     <!-- <link rel="stylesheet" href="/assets/css/global.css?{{ assetHash }}" /> -->
     {% include "head/css-inline.njk" %}
+    
     <!-- 6 preloads  -->
     {% include "head/preloads.njk" %}
+    
     <!-- 7 defer  -->
     {% include "head/js-defer.njk" %}
+
     <!-- 8 meta tags, icons, open graph etc.  -->
     {% include "head/meta-info.njk" %}
   </head>
 
   <body class="{{ layout }}">
-    {% if page.url == "/" %}
-      <main id="main" class="flow">{{ content | safe }}</main>
-    {% else %}
-      {% include "partials/header.njk" %}
-      <main id="main" class="flow">{{ content | safe }}</main>
-    {% endif %}
+    {% include "partials/header.njk" %}
+
+    <main id="main" class="flow">{{ content | safe }}</main>
+
     {% include "partials/footer.njk" %}
+
     <script type="module" src="/assets/scripts/components/custom-easteregg.js"></script>
     <custom-easteregg></custom-easteregg>
   </body>
