@@ -1,7 +1,7 @@
 ---
 title: 'The Dreaded First Post'
 description: "Plans for the blog."
-date: 2024-10-15 21:33:54 -5
+date: 2024-10-16
 ---
 Skynet said it had to be done. So done it was.
 
