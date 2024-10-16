@@ -1,5 +1,5 @@
 ---
-title: About Me
+title: Jean Ducrot
 permalink: /about/index.html
 description: 'Jean Ducrot in the long form.'
 layout: page
