@@ -6,6 +6,7 @@
       "@type": "WebPage"
     },
     "isPartOf": {
+<<<<<<< HEAD
       "@id": "{{ meta.url }}#website"
     },
     "@id": "{{ url }}",
@@ -21,6 +22,23 @@
     "author": {
       "@type": "Person",
       "name": "{{ meta.author.name }}"
+=======
+      "@id": "{{ meta.siteURL }}#website"
+    },
+    "@id": "{{ url }}",
+    "headline": "{{ title or meta.siteName }}",
+    "description": "{{ excerpt or meta.siteDescription }}",
+    "image": "{% if seo.image %}/_assets/images/{{ seo.image }}{% else %}{{ meta.siteImage }}{% endif %}",
+    "inLanguage": "{{ meta[locale].localeCode }}",
+    "publisher": {
+      "@type": "{{ meta.siteType }}",
+      "name": "{{ meta.authorName }}",
+      "url": "{{ meta.siteURL }}"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "{{ meta.authorName }}"
+>>>>>>> db1207a (first commit)
     },
     "datePublished": "{{ date | toIsoString }}"
   }

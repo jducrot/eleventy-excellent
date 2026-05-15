@@ -1,10 +1,15 @@
 {
+<<<<<<< HEAD
   "printWidth": 110,
+=======
+  "printWidth": 90,
+>>>>>>> db1207a (first commit)
   "tabWidth": 2,
   "singleQuote": true,
   "bracketSpacing": false,
   "quoteProps": "consistent",
   "trailingComma": "none",
+<<<<<<< HEAD
   "arrowParens": "avoid",
   "plugins": ["prettier-plugin-jinja-template"],
   "overrides": [
@@ -15,4 +20,7 @@
       }
     }
   ]
+=======
+  "arrowParens": "avoid"
+>>>>>>> db1207a (first commit)
 }

@@ -1,4 +1,5 @@
 <script type="application/ld+json">
+<<<<<<< HEAD
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -12,4 +13,19 @@
       }
     ]
   }
+=======
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebSite",
+				"@id": "{{ meta.siteURL }}#website",
+				"url": "{{ meta.siteURL }}",
+				"name": "{{ meta.siteName }}",
+				"description": "{{ meta[locale].metaDescription }}",
+				"inLanguage": "{{ meta[locale].localeCode }}"
+			}
+		]
+	}
+>>>>>>> db1207a (first commit)
 </script>

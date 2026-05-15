@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Node modules
 **/node_modules/**
 
@@ -14,3 +15,21 @@ src/_includes/scripts
 
 # lock file
 package-lock.json
+=======
+# Misc
+*.log
+npm-debug.*
+*.scssc
+*.log
+*.swp
+.DS_Store
+Thumbs.db
+.sass-cache
+.env
+.cache
+
+# Node modules and output
+node_modules
+dist
+src/_includes/css
+>>>>>>> db1207a (first commit)
